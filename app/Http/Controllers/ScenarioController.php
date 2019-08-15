@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Scenario;
+use App\Attribute;
 use Illuminate\Http\Request;
 
 class ScenarioController extends Controller
@@ -12,9 +13,11 @@ class ScenarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        //
+        $scenarios = Scenario::where('user_id',auth()->id())->get();
+        return view('scenario',compact('scenarios'));
     }
 
     /**
@@ -22,9 +25,10 @@ class ScenarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create()
     {
-        //
+        return view('createScenario');
     }
 
     /**
@@ -33,9 +37,14 @@ class ScenarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
-        //
+        $scenario = Scenario::create([
+            'name'         => $request->name,
+            'user_id'         => 1,
+        ]);
+        return redirect('/scenario/'.$scenario->id);
     }
 
     /**
@@ -44,9 +53,14 @@ class ScenarioController extends Controller
      * @param  \App\Scenario  $scenario
      * @return \Illuminate\Http\Response
      */
-    public function show(Scenario $scenario)
+    
+    public function show($id)
     {
-        //
+        $scenario = Scenario::where('id',$id)->first();
+
+        $attrs = Attribute::where('scenario_id',$id)->get();
+
+        return view('showScenario',compact('scenario','attrs'));
     }
 
     /**

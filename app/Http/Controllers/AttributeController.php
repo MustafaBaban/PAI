@@ -36,7 +36,11 @@ class AttributeController extends Controller
      */
     public function store(Request $request)
     {
-
+        $attribute = Attribute::create([
+            'name'         => $request->name,
+            'scenario_id'         => $request->scenario_id,
+        ]);
+        return redirect()->back();
     }
 
     /**

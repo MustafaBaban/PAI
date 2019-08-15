@@ -1,68 +1,203 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>Landing Page - Start Bootstrap Theme</title>
 
-    <!-- Scripts -->
+  <!-- Bootstrap core CSS -->
+<link href="{{url('css/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-    <script src="https://unpkg.com/ml5@0.3.1/dist/ml5.min.js" type="text/javascript"></script>
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="{{url('css/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+  <link href="{{url('css/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{{url('css/landing-page.min.css')}}" rel="stylesheet">
+<style>
+  .btn-primary{
+    background-color:#484fa1 !important;
+    border-color:#484fa1 !important;
+    
+  }
+  .text-primary{
+    text-shadow: -2px -1px 2px rgba(145, 150, 150, 1);
+    color:#484fa1;
+
+  }
+  .texxt{
+    text-shadow: -1px -1px 1px black;
+
+  }
+</style>
 </head>
+
 <body>
 
-  <h2>KNN Classification on Webcam Images with mobileNet. Built with p5.js</h2>
-  <div id="videoContainer"></div>
-  <p id="status">Loading Model...</p>
-  <div>
-    <button id="load">Load Dataset</button><br />
-    <p>If you load this sample classifer dataset. Try to make rock, paper, or scissor gestures to see if the classifier can class them.<br />
-      If this sample dataset doesn't work well for you, you could train your own classifier,<br />
-      and use the 'Save Dataset' button below to create your own myKNNDataset.json file,<br />
-      and replace the myKNNDataset.json in this folder.'
-    </p>
-  </div>
-  <br /><p>
-    <span class="emoji"> ✊ </span><button id="addClassRock">Add an Example to Class Rock</button>
-    <button id="resetRock">Reset Class Rock</button>
-    </p><p><span id="exampleRock">0</span> Rock examples</p>
-    <p>| Confidence in Rock is: <span id="confidenceRock">0</span></p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="{{url('logo.png')}}" style="max-height: 48px;" alt=""></a>
+      <a class="btn btn-primary" data-toggle="modal" data-target="#loginModal"  href="#">Sign In</a>
+    </div>
+  </nav>
 
-    <br /><span class="emoji"> 🖐 </span><button id="addClassPaper">Add an Example to Class Paper</button>
-    <button id="resetPaper">Reset Class Paper</button>
-    <p><span id="examplePaper">0</span> Paper examples</p>
-    <p>| Confidence in Paper is: <span id="confidencePaper">0</span></p>
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5 texxt">By signing up you get all of the features of Basic A.I</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 
-    <br /><span class="emoji"> ✌️ </span><button id="addClassScissor">Add an Example to Class Scissor</button>
-    <button id="resetScissor">Reset Class Scissor</button>
-    <p><span id="exampleScissor">0</span> Scissor examples</p>
-    <p>| Confidence in Scissor is: <span id="confidenceScissor">0</span></p>
+          <a class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#registerModal" href="#">Sign up!</a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <h3>Fully Responsive</h3>
+            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Bootstrap 4 Ready</h3>
+            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Easy to Use</h3>
+            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Fully Responsive Design</h2>
+          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Updated For Bootstrap 4</h2>
+          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Easy to Use &amp; Customize</h2>
+          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 class="mb-5">What people are saying...</h2>
+      <div class="row">
+
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src="testimonials-2.jpg" alt="">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
   
-  <br />
-  <p>
-    <button id="buttonPredict">Start predicting!</button><br />
-    <button id="clearAll">Clear all classes</button><br />
-  </p>
-  <p>
-    KNN Classifier with mobileNet model labeled this
-    as Class: <span id="result">...</span>
-    with a confidence of <span id="confidence">...</span>
-  </p>
-  <div><button id="save">Save Dataset</button></div>
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
- <script src="js/sketch.js"></script>
-
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url('css/jquery/jquery.min.js')}}"></script>
+  <script src="{{url('css/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  @include('registerModal')
+  @include('loginModal')
 </body>
+
 </html>

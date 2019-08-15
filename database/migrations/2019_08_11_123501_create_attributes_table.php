@@ -15,7 +15,7 @@ class CreateAttributesTable extends Migration
     {
         Schema::create('attributes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->unsignedBigInteger('scenario_id');
             $table->foreign('scenario_id')->references('id')->on('scenarios');
             $table->timestamps();

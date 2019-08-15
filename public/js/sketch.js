@@ -33,7 +33,6 @@ function modelReady(){
 function addExample(label) {
   // Get the features of the input video
   const features = featureExtractor.infer(video);
-  console.log(video);
   // You can also pass in an optional endpoint, defaut to 'conv_preds'
   // const features = featureExtractor.infer(video, 'conv_preds');
   // You can list all the endpoints by calling the following function
@@ -128,16 +127,14 @@ function gotResults(err, result) {
   }
 
   if (result.confidencesByLabel) {
-    const confidences = result.confidencesByLabel;
+    // const confidences = result.confidencesByLabel; 
     // result.label is the label that has the highest confidence
     if (result.label) {
       select('#result').html(result.label);
-      select('#confidence').html(`${confidences[result.label] * 100} %`);
+      // select('#confidence').html(`${confidences[result.label] * 100} %`);
     }
     
-    if(result.label) {
-    select(`#confidence${result.label}`).html(`${confidences[result.label] ? confidences[result.label] * 100 : 0} %`);
-    }
+
   }
 
   classify();

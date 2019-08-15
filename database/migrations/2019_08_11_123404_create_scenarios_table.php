@@ -15,7 +15,7 @@ class CreateScenariosTable extends Migration
     {
         Schema::create('scenarios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
