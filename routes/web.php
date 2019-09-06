@@ -22,10 +22,13 @@ Route::post('/scenario', 'ScenarioController@store')->middleware('auth');
 
 Route::post('/scenario/{id}/attribute', 'AttributeController@store')->middleware('auth');
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 })->middleware('guest');
 
+Route::get('/', function () {
+    return redirect('/welcome');
+})->middleware('guest');
 
 
 Auth::routes();
