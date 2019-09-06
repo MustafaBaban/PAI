@@ -12,33 +12,33 @@
 */
 
 
-Route::get('/scenario/{id}', 'ScenarioController@show')->middleware('auth');
+// Route::get('/scenario/{id}', 'ScenarioController@show')->middleware('auth');
 
-Route::get('/scenario/create', 'ScenarioController@create')->middleware('auth');
+// Route::get('/scenario/create', 'ScenarioController@create')->middleware('auth');
 
-Route::get('/scenario', 'ScenarioController@index')->middleware('auth');
+// Route::get('/scenario', 'ScenarioController@index')->middleware('auth');
 
-Route::post('/scenario', 'ScenarioController@store')->middleware('auth');
+// Route::post('/scenario', 'ScenarioController@store')->middleware('auth');
 
-Route::post('/scenario/{id}/attribute', 'AttributeController@store')->middleware('auth');
+// Route::post('/scenario/{id}/attribute', 'AttributeController@store')->middleware('auth');
 
-Route::get('/welcome', function () {
-    return view('welcome');
-})->middleware('guest');
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// })->middleware('guest');
 
 Route::get('/', function () {
     return view('demoScenario');
 })->middleware('guest');
 
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/logout', function () {
+// Route::get('/logout', function () {
 
-    Auth::logout();
+//     Auth::logout();
 
-    return Redirect::to('/');
+//     return Redirect::to('/');
 
-});
+// });
 
-Route::get('/home', 'ScenarioController@index')->name('home')->middleware('auth');
+// Route::get('/home', 'ScenarioController@index')->name('home')->middleware('auth');
