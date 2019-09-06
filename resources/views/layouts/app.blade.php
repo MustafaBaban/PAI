@@ -10691,18 +10691,12 @@ a.text-dark:focus {
     {{-- <div id="app"> --}}
     <div class="d-flex" id="app">
             <!-- Sidebar -->
-        {{-- <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
         
             <div class="sidebar-heading"><a class="navbar-brand" href="#"><img src="{{url("logo.png")}}" style="max-height: 48px;" alt=""></a></div>
 
-            <div class="list-group list-group-flush">
-                <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="list-group-item list-group-item-action bg-light">Create Scenario</a>
-                <a href="{{url('/scenario')}}" class="list-group-item list-group-item-action bg-light">My Scenarios</a>
 
-                <a href="{{url('/logout')}}" class="list-group-item list-group-item-action bg-light">Logout</a>
-            </div>
-
-        </div> --}}
+        </div>
 
         <!-- /#sidebar-wrapper -->
         @yield('content')
