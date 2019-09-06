@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5 texxt">By signing up you get all of the features of Basic A.I</h1>
+          <h1 class="mb-5 texxt">By signing up you get all of the features of Posture A.I</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 
@@ -74,8 +74,7 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-screen-desktop m-auto text-primary"></i>
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+            <h3>Use Anywhere</h3>
           </div>
         </div>
         <div class="col-lg-4">
@@ -83,8 +82,7 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-layers m-auto text-primary"></i>
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            <h3>Make your own dataset!</h3>
           </div>
         </div>
         <div class="col-lg-4">
@@ -93,7 +91,6 @@
               <i class="icon-check m-auto text-primary"></i>
             </div>
             <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
           </div>
         </div>
       </div>
@@ -107,44 +104,20 @@
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('bg-showcase-1.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+          <h2>Fully Responsive</h2>
+          <p class="lead mb-0">Whether it's a phone, tablet, or desktop the app will behave responsively!</p>
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('bg-showcase-2.jpg');"></div>
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('bg-showcase-3.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2>Updated For Bootstrap 4</h2>
-          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+          <h2>Easy to use</h2>
+          <p class="lead mb-0">User friendly, any person can access it online and use it</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials text-center bg-light">
-    <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
-      <div class="row">
-
-        <div class="col-lg-4">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
   
   <!-- Footer -->
   <footer class="footer bg-light">
