@@ -89,7 +89,7 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-<script src="{{url('js/sketch.js')}}"></script>
+<script src="https://raw.githubusercontent.com/MustafaBaban/PAI/master/public/js/sketch.js"></script>
 
 <script>
 
