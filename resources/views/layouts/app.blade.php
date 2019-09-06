@@ -10691,7 +10691,7 @@ a.text-dark:focus {
     {{-- <div id="app"> --}}
     <div class="d-flex" id="app">
             <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
+        {{-- <div class="bg-light border-right" id="sidebar-wrapper">
         
             <div class="sidebar-heading"><a class="navbar-brand" href="#"><img src="{{url("logo.png")}}" style="max-height: 48px;" alt=""></a></div>
 
@@ -10702,7 +10702,7 @@ a.text-dark:focus {
                 <a href="{{url('/logout')}}" class="list-group-item list-group-item-action bg-light">Logout</a>
             </div>
 
-        </div>
+        </div> --}}
 
         <!-- /#sidebar-wrapper -->
         @yield('content')
