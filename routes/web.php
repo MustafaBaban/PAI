@@ -27,7 +27,7 @@ Route::get('/welcome', function () {
 })->middleware('guest');
 
 Route::get('/', function () {
-    return redirect('/welcome');
+    return view('demoScenario');
 })->middleware('guest');
 
 
