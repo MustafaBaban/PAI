@@ -67,57 +67,6 @@ function classify() {
   // gotResults(null, res);
 }
 
-// // A util function to create UI buttons
-// function createButtons() {
-//   // When the A button is pressed, add the current frame
-//   // from the video with a label of "rock" to the classifier
-//   buttonA = select('#addClassRock');
-  
-//   buttonA.mousePressed(function() {
-//     addExample('Rock');
-//   });
-
-//   // When the B button is pressed, add the current frame
-//   // from the video with a label of "paper" to the classifier
-//   buttonB = select('#addClassPaper');
-//   buttonB.mousePressed(function() {
-//     addExample('Paper');
-//   });
-
-//   // When the C button is pressed, add the current frame
-//   // from the video with a label of "scissor" to the classifier
-
-
-//   // Reset buttons
-//   resetBtnA = select('#resetRock');
-//   resetBtnA.mousePressed(function() {
-//     clearLabel('Rock');
-//   });
-	
-//   resetBtnB = select('#resetPaper');
-//   resetBtnB.mousePressed(function() {
-//     clearLabel('Paper');
-//   });
-	
-
-//   // Predict button
-//   buttonPredict = select('#buttonPredict');
-//   buttonPredict.mousePressed(classify);
-
-//   // Clear all classes button
-//   buttonClearAll = select('#clearAll');
-//   buttonClearAll.mousePressed(clearAllLabels);
-
-//   // Load saved classifier dataset
-//   buttonSetData = select('#load');
-//   buttonSetData.mousePressed(loadMyKNN);
-
-//   // Get classifier dataset
-//   buttonGetData = select('#save');
-//   buttonGetData.mousePressed(saveMyKNN);
-// }
-
-
 
 // Show the results
 function gotResults(err, result) {
@@ -134,7 +83,6 @@ function gotResults(err, result) {
       // select('#confidence').html(`${confidences[result.label] * 100} %`);
     }
     
-
   }
 
   classify();
